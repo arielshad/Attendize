@@ -1,0 +1,46 @@
+{
+  "context": "This evaluation assesses the engineer's proficiency in using the geocomplete jQuery plugin to implement a location search interface with map integration, draggable markers, and form population. The criteria focus exclusively on proper usage of geocomplete's API, configuration options, events, and methods.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "Plugin initialization",
+      "description": "Correctly initializes the geocomplete plugin on the search input element using $().geocomplete() with appropriate configuration options including map and details parameters",
+      "max_score": 15
+    },
+    {
+      "name": "Map integration",
+      "description": "Properly configures the map option to link the geocomplete input to the map container (e.g., map: '#map'), enabling automatic map centering and marker placement on geocode results",
+      "max_score": 15
+    },
+    {
+      "name": "Form population",
+      "description": "Correctly configures the details option to automatically populate form fields with geocoded address components (e.g., details: '#address-form' or details: 'form'), utilizing the plugin's automatic field mapping via name attributes",
+      "max_score": 15
+    },
+    {
+      "name": "Draggable marker",
+      "description": "Enables marker dragging by setting markerOptions.draggable to true in the geocomplete configuration",
+      "max_score": 10
+    },
+    {
+      "name": "Drag event handling",
+      "description": "Implements geocode:dragged event handler using .bind() or .on() to capture the new LatLng position when the marker is dragged, and updates the latitude and longitude form fields with the new coordinates",
+      "max_score": 15
+    },
+    {
+      "name": "Reset button visibility",
+      "description": "Shows the reset button within the geocode:dragged event handler (e.g., $('#reset-btn').show()) to indicate that the marker position has been manually adjusted",
+      "max_score": 10
+    },
+    {
+      "name": "Reset functionality",
+      "description": "Implements reset button click handler that calls the geocomplete resetMarker() method using the string-based API (e.g., $('#geocomplete').geocomplete('resetMarker')) to restore the marker to the original geocoded position",
+      "max_score": 15
+    },
+    {
+      "name": "Reset button cleanup",
+      "description": "Hides the reset button after calling resetMarker() or on successful geocode:result events to maintain proper UI state",
+      "max_score": 5
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "tessl/npm-geocomplete",
+  "version": "1.6.5",
+  "docs": "docs/index.md",
+  "describes": "pkg:npm/geocomplete@1.6.5",
+  "summary": "jQuery Geocoding and Places Autocomplete Plugin"
+}
