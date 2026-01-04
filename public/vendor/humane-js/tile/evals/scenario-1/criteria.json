@@ -1,0 +1,36 @@
+{
+  "context": "This evaluation assesses how effectively the engineer uses the humane-js notification library to implement a notification manager with three distinct notification types. The criteria focus specifically on the proper use of humane-js API methods and options.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "Uses humane.spawn()",
+      "description": "Creates custom notifiers using humane.spawn() with appropriate default options for each notification type (success, error, info), rather than calling humane.log() directly with options each time",
+      "max_score": 30
+    },
+    {
+      "name": "Timeout configuration",
+      "description": "Correctly configures the timeout option for each notification type: 2000ms for success, 4000ms for info, and appropriate timeout for error messages",
+      "max_score": 20
+    },
+    {
+      "name": "Click-to-close setup",
+      "description": "Properly uses the clickToClose option to enable click-to-dismiss behavior for error notifications",
+      "max_score": 15
+    },
+    {
+      "name": "Callback integration",
+      "description": "Correctly passes the onComplete callback parameter to humane-js using the callback parameter of the log method or as part of the options object",
+      "max_score": 15
+    },
+    {
+      "name": "Per-message overrides",
+      "description": "Implements per-message option overrides for the autoDismiss scenario by passing options to the spawned notifier that override the default clickToClose and timeout settings",
+      "max_score": 15
+    },
+    {
+      "name": "CSS class styling",
+      "description": "Uses the addnCls option to apply appropriate CSS classes for different notification types (e.g., adding color-specific classes for success/error/info themes)",
+      "max_score": 5
+    }
+  ]
+}

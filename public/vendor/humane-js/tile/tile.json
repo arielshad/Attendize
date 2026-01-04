@@ -1,0 +1,7 @@
+{
+  "name": "tessl/bower-humane-js",
+  "version": "3.2.2",
+  "docs": "docs/index.md",
+  "describes": "pkg:bower/humane-js@3.2.2",
+  "summary": "A simple, modern, browser notification system"
+}
