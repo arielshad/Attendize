@@ -1,0 +1,46 @@
+{
+  "context": "This evaluation assesses how effectively an engineer uses the jquery-minicolors package API to implement a theme customizer widget. The criteria focus exclusively on proper usage of package-specific functions, methods, and configuration options.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "Swatches initialization",
+      "description": "Uses the 'swatches' option during initialization with the correct array of 5 preset colors: ['#3498db', '#2ecc71', '#e74c3c', '#34495e', '#ecf0f1']",
+      "max_score": 20
+    },
+    {
+      "name": "Initial configuration",
+      "description": "Configures the color picker with correct initial settings: 'control: wheel', 'format: rgb', 'opacity: true', and 'position: top right'",
+      "max_score": 15
+    },
+    {
+      "name": "Settings method usage",
+      "description": "Uses the .minicolors('settings', {...}) method to dynamically update configuration when switching modes",
+      "max_score": 15
+    },
+    {
+      "name": "Mode-specific settings",
+      "description": "Correctly updates 'control', 'format', and 'opacity' settings based on mode: simple mode uses 'hue' control with 'hex' format and opacity false; advanced mode uses 'wheel' control with 'rgb' format and opacity true",
+      "max_score": 15
+    },
+    {
+      "name": "Object notation value",
+      "description": "Uses .minicolors('value', {color: colorValue, opacity: 0.85}) with object notation to set both color and opacity atomically in the applyPresetColor function",
+      "max_score": 20
+    },
+    {
+      "name": "rgbObject method",
+      "description": "Calls .minicolors('rgbObject') method to retrieve the current color as an object with r, g, b, and a properties",
+      "max_score": 5
+    },
+    {
+      "name": "rgbaString method",
+      "description": "Calls .minicolors('rgbaString') method to retrieve the current color as a CSS-ready RGBA string",
+      "max_score": 5
+    },
+    {
+      "name": "Return format structure",
+      "description": "Returns an object from getColorInfo with properties 'rgbObject' and 'cssString' containing the results from the respective minicolors methods",
+      "max_score": 5
+    }
+  ]
+}

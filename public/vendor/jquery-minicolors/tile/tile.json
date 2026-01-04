@@ -1,0 +1,7 @@
+{
+  "name": "tessl/npm-jquery-minicolors",
+  "version": "2.2.3",
+  "docs": "docs/index.md",
+  "describes": "pkg:npm/jquery-minicolors@2.2.3",
+  "summary": "A tiny color picker plugin built on jQuery that provides an intuitive interface for selecting colors with support for multiple formats, opacity controls, and customizable themes"
+}
