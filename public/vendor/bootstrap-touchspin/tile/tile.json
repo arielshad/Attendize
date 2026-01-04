@@ -1,0 +1,7 @@
+{
+  "name": "tessl/bower-bootstrap-touchspin",
+  "version": "3.0.1",
+  "docs": "docs/index.md",
+  "describes": "pkg:bower/bootstrap-touchspin@3.0.1",
+  "summary": "Bootstrap TouchSpin is a jQuery plugin that provides a mobile and touch-friendly numeric input spinner component designed for Bootstrap 3 applications."
+}

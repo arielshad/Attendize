@@ -1,0 +1,26 @@
+{
+  "context": "This evaluation assesses how effectively the engineer uses bootstrap-touchspin's API to implement the Dynamic Range Adjuster. It focuses exclusively on correct usage of the package's initialization, event handling, dynamic reconfiguration, and acceleration features.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "Initialization",
+      "description": "Correctly initializes bootstrap-touchspin using $().TouchSpin() with the initval parameter set to 50, min parameter set to 0, and max parameter set to 100",
+      "max_score": 20
+    },
+    {
+      "name": "Event Listeners",
+      "description": "Uses the touchspin.on.min and touchspin.on.max events to detect when boundaries are reached, implementing proper event binding with .on() method to listen for these custom events",
+      "max_score": 25
+    },
+    {
+      "name": "Dynamic Reconfiguration",
+      "description": "Uses the touchspin.updatesettings event trigger (e.g., $input.trigger('touchspin.updatesettings', {max: 200})) to dynamically change the maximum value to 200 when the input value reaches or exceeds 75, using a change event listener or similar mechanism to detect the threshold",
+      "max_score": 30
+    },
+    {
+      "name": "Booster Configuration",
+      "description": "Configures the booster feature by setting the booster parameter to true and the maxboostedstep parameter to 10 to limit acceleration, ensuring these settings are applied when the maximum is 200 (either in initial configuration or via updatesettings)",
+      "max_score": 25
+    }
+  ]
+}
