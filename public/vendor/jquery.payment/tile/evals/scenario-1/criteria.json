@@ -1,0 +1,41 @@
+{
+  "context": "This evaluation assesses how well the engineer uses the jquery.payment library to implement a payment form validation system with custom card type support. The focus is entirely on correct usage of jquery.payment API methods, proper card type extension, and integration of validation functions.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "Custom Card Registration",
+      "description": "Correctly defines and registers the RegionCard type by creating a card object with all required properties (type, patterns, format, length, cvcLength, luhn) and adds it to the $.payment.cards array using unshift() or appropriate method to ensure pattern priority.",
+      "max_score": 25
+    },
+    {
+      "name": "Card Type Detection",
+      "description": "Uses $.payment.cardType() method to detect the card type from the card number string in the getCardInfo function.",
+      "max_score": 10
+    },
+    {
+      "name": "Card Number Validation",
+      "description": "Uses $.payment.validateCardNumber() method to validate card numbers including Luhn algorithm checking in the getCardInfo function.",
+      "max_score": 15
+    },
+    {
+      "name": "Card Number Formatting",
+      "description": "Uses $.payment.formatCardNumber() method to format the card number with appropriate spacing in the getCardInfo function.",
+      "max_score": 10
+    },
+    {
+      "name": "Expiry Parsing",
+      "description": "Uses $.payment.cardExpiryVal() method to parse the expiry string into month and year components in the validateExpiry function.",
+      "max_score": 15
+    },
+    {
+      "name": "Expiry Validation",
+      "description": "Uses $.payment.validateCardExpiry() method with either separate month/year parameters or the parsed object from cardExpiryVal to validate that the expiry date is in the future.",
+      "max_score": 15
+    },
+    {
+      "name": "CVC Validation",
+      "description": "Uses $.payment.validateCardCVC() method with both the CVC value and optional card type parameter to perform type-aware security code validation in the validateSecurityCode function.",
+      "max_score": 10
+    }
+  ]
+}
